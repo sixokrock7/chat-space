@@ -1,0 +1,144 @@
+@import "./_valiable";
+
+.chat_header {
+  background-color: $skyblue;
+  //width: 1000px;
+  height: 30px;
+  color: $white;
+  text-align: center;
+}
+
+.chat_left {
+  float: left;
+  width: 300px;
+  height: 700px;
+
+  .chat_left_contents {
+    color: $white;
+
+    .top {
+      padding-top: 35px;
+      font-weight: bold;
+      height: 96px;
+    }
+    .chat_left_contents_top {
+      background-color: #253141;
+      height: 96px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .chat_left_contents_bellow {
+      background-color: #2f3e51;
+      padding-left: 20px;
+      height: 754px-96px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    .next_message {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+}
+
+  .group_name {
+    font-size: 15px;
+  }
+
+  .messages {
+    font-size: 11px;
+  }
+.chat_right {
+  margin-left: 300px;
+
+  .chat_right_contents_top {
+    border-bottom: solid 1px #eeeeee;
+    padding-left: 40px;
+    padding-right: 40px;
+    .group_name {
+      padding-top: 30px;
+      padding-bottom: 0px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      color: #333333;
+      font-size: 20px;
+    }
+      .members_name {
+        font-size: 12px;
+        color: $rightgray;
+        padding-top: 0px;
+        padding-bottom: 15px;
+      }
+    .edit {
+      float: right;
+      color: $skyblue;
+      padding: 0px 20px 0px;
+      height: 40px;
+      border: solid 2px $skyblue;
+      position: absolute;
+      top:56px;
+      right: 20px;
+      vertical-align: bottom;
+    }
+  }
+    .chat_right_contents_bellow {
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 46px;
+      .created_time {
+        font-size: 12px;
+        color: $rightgray;
+
+      }
+    }
+  .chat_footer {
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #eeeeee;
+    position: absolute;
+    bottom: 0px;
+    width: 1070px;
+    height: 90px;
+  }
+  .message_post {
+    margin: 20px 10px;
+    height: 50px;
+    width: 1070px-115px;
+  }
+  .placeholder {
+    font-size: 16px;
+    color: #434A54;
+    position: absolute;
+    bottom: 33px;
+    left:60px;
+  }
+  .file_post {
+    position: absolute;
+    right: 50px;
+    bottom: 10px;
+    height: 50px;
+  }
+  .icon_image {
+    position: absolute;
+    height: 12px;
+    width: 12px;
+  }
+  .fa .fa-image {
+    height: 12px;
+    width: 12px;
+  }
+  .send {
+    position: absolute;
+    padding: 0px 25px 0px;
+    height: 50px;
+    right: 40px;
+    bottom:16px;
+    float: right;
+    color: #FFF;
+    border: solid 2px $skyblue;
+    margin: 20px 0px 0px 25px;
+    background-color: $skyblue;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
