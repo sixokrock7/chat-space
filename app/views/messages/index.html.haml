@@ -1,39 +1,50 @@
-#div.chat_header
+#div.header
   %p チャットグループが作成されました。
 
-#div.chat_left
-  #div.chat_left_contents
-    #div.chat_left_contents_top
-      #div.chat_left_contents_name
-        %p.top tatsuki-nakamura
-      #div.icon_cog
-        =link_to root_path do
-          %i.fas.fa-edit
-          %i.fas.fa-cog
-    #div.chat_left_contents_bellow
-      %p.group_name techcamp
-      %p.messages まだメッセージはありません
-      #div.next_message
-        %p.group_name sampleグループ
-        %p.messages aaa
-#div.chat_right
-  #div.chat_right_contents_top
-    %p.group_name techcamp
-    %p.edit Edit
-    %p.members_name Members: tatsuki-nakamura
+#div.left
+  #div.left__contents
+    #div.left__contents--top
+      #div.left__contents--name
+        %p tatsuki-nakamura
+        #div.icon__cog
+          =link_to root_path do
+            %i.fas.fa-edit
+            %i.fas.fa-cog
+    #div.left__contents--bellow
+      #div.left__contents--bellow-group
+        %p techcamp
+      #div.left__contents--bellow-message
+        %p まだメッセージはありません
+    #div.left__contents--bellow
+      #div.left__contents--bellow-group
+        %p sampleグループ
+      #div.left__contents--bellow-message
+        %p aaa
+#div.right
+  #div.right__contents
+    #div.right__contents--top
+      #div.right__contents--top-group
+        %p techcamp
+      #div.right__contents--top-member
+        %p Members: tatsuki-nakamura
+      #div.right__contents--top-button
+        %p.inline Edit
 
+    #div.right__contents--bellow
+      #div.right__contents--bellow-name
+        %p tatsuki-nakamura
+      #div.right__contents--bellow-time
+        %p 2018/07/07
+      #div.right__contents--bellow-message
+        %p sss
 
-  #div.chat_right_contents_bellow
-    %p.right_name tatsuki-nakamura
-    %span
-      %p.created_time 2018/07/07
-    %p.right_message sss
-
-  #div.chat_footer
+#div.right__footer
+  #div.right__footer--message
     %form{:action => "#", :method => "post"}
-      %input.message_post{:type => "text", :name => "comments" }
-    %p.placeholder type a message
-    #div.icon_image
-      = link_to root_path do
-        %i.fa.fa-image
-    %p.send send
+    #right__footer--message-post
+      %input{:type => "text", :name => "comments", placeholder: "type a message" }
+  #div.right__footer--icon
+    = link_to root_path do
+      %i.fa.fa-image
+  #div.right__footer--button
+    %p send
