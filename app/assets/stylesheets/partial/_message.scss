@@ -1,0 +1,146 @@
+@import "./_valiable";
+
+.header {
+  background-color: $skyblue;
+  //width: 1000px;
+  height: 30px;
+  color: $white;
+  text-align: center;
+}
+
+.left {
+  float: left;
+  width: 300px;
+  //height: 700px;
+
+  &__contents {
+    color: $white;
+    height: 893px-96px;
+    background-color: #2f3e51;
+    &--top {
+      padding: 35px 20px 96px-51px 20px;
+      font-weight: bold;
+      background-color: #253141;
+      font-size: 16px;
+    }
+    &--bellow {
+
+      padding: 20px;
+      &-group {
+        font-size: 15px;
+      }
+      &-message {
+        font-size: 11px;
+      }
+    }
+  }
+}
+.inline {
+  color: $skyblue;
+  display: inline;
+  text-align: center;
+}
+.right {
+  position: absolute;
+  top: 0px;
+  left: 300px;
+  width: calc( 100vw - 300px );
+  &__contents {
+    padding-top: 30px;
+    &--top {
+      border-bottom: solid 1px #eeeeee;
+      padding: 35px 40px 0px 40px;
+
+      &-group {
+        //padding-top: 30px;
+        padding-bottom: 0px;
+        margin: 0px;
+        color: #333333;
+        font-size: 20px;
+      }
+      &-member {
+        font-size: 12px;
+        color: $rightgray;
+        padding-top: 15px;
+        padding-bottom: 7px;
+      }
+      &-button {
+        float: right;
+        color: $skyblue;
+        padding: 0px 20px 0px;
+        height: 40px;
+        border: solid 2px $skyblue;
+        position: absolute;
+        top:58px;
+        right: 40px;
+        vertical-align: bottom;
+        text-align: center;
+      }
+    }
+    &--bellow {
+      padding:46px 0px 40px 40px;
+      &-name {
+        font-size: 16px;
+        font-weight: bold;
+        float: left;
+      }
+      &-time {
+        font-size: 12px;
+        color: $rightgray;
+        text-indent: 10px;
+      }
+      &-message {
+        clear: both;
+        font-size: 14px;
+      }
+    }
+  }
+  &__footer {
+    padding-left: 40px;
+    padding-right: 40px;
+    background-color: #eeeeee;
+    position: absolute;
+    bottom: 0px;
+    height: 90px;
+    left: 300px;
+
+      &--message {
+        margin: 20px 10px 20px 0px;
+        height: 50px;
+        width: calc( 100vw - 385px );
+      }
+        input {
+          height: 50px;
+          width: calc( 100vw - 505px );
+          padding-left: 10px;
+        }
+
+    &--icon {
+      position: absolute;
+      right: 50px;
+      bottom: 10px;
+      height: 50px;
+      position: absolute;
+      height: 12px;
+      width: 12px;
+    }
+    .fa .fa-image {
+      height: 12px;
+      width: 12px;
+    }
+    &--button {
+      position: absolute;
+      padding: 0px 25px 0px;
+      height: 50px;
+      right: 40px;
+      bottom:20px;
+      float: right;
+      color: #FFF;
+      border: solid 2px $skyblue;
+      margin: 20px 0px 0px 25px;
+      background-color: $skyblue;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
