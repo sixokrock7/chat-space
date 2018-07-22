@@ -12,7 +12,7 @@ $(function() {
                   </p>`
     return html;
   }
-  $('#new_comment').on('submit', function(e) {
+  $('#new_mesage').on('submit', function(e) {
     e.preventDefault();
     var formData = new FormData(this);
     var url = $(this).attr('action')
@@ -28,6 +28,11 @@ $(function() {
       var html = buildHTML(data);
       $('.messages').append(html)
       $('.textbox').val('')
+    })
+    $('#btn').animate({scrollTop: $(#btn)})
+
+    .fail(function(){
+      alert('error');
     })
   })
 });
