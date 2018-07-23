@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  #ルートパスにmessagesコントローラーのindexアクションを設定
-  root "messages#index"
+  #ルートパスにgroupsコントローラーのindexアクションを設定
+  root "groups#index"
   #usersモデルのindex,edit,updateアクションのルーティングを設定
   resources :users, only: [:index, :edit, :update]
   #groupsモデルのnew,create,edit,updateアクションのルーティングを設定
