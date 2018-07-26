@@ -115,7 +115,7 @@
           padding-left: 10px;
         }
 
-    &--icon {
+    &--icon::before {
       position: absolute;
       right: 50px;
       bottom: 10px;
@@ -124,7 +124,7 @@
       height: 12px;
       width: 12px;
     }
-    .fa .fa-image {
+    .fa .fa-image::before {
       height: 12px;
       width: 12px;
     }
