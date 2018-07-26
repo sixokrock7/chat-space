@@ -3,6 +3,7 @@ class ImageUploader < CarrierWave::Uploader::Base
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
 
+  #resize_to_fitで縦横比を維持したままwidth,heightを800pxにリサイズ
   process resize_to_fit: [800, 800]
   # Choose what kind of storage to use for this uploader:
   storage :file
