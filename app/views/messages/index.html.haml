@@ -1,50 +1,52 @@
-#div.header
+.header
   %p チャットグループが作成されました。
 
-#div.left
-  #div.left__contents
-    #div.left__contents--top
-      #div.left__contents--name
+.left
+  .left__contents
+    .left__contents--top
+      .left__contents--name
         %p tatsuki-nakamura
-        #div.icon__cog
-          =link_to root_path do
-            %i.fas.fa-edit
-            %i.fas.fa-cog
-    #div.left__contents--bellow
-      #div.left__contents--bellow-group
+          %ul.icon__cog
+            %li.list
+            =link_to root_path do
+              = fa_icon 'pencil-square-o', class: 'icon'
+            %li.list
+              = fa_icon 'fa-cog', class: 'icon'
+    .left__contents--bellow
+      .left__contents--bellow-group
         %p techcamp
-      #div.left__contents--bellow-message
+      .left__contents--bellow-message
         %p まだメッセージはありません
-    #div.left__contents--bellow
-      #div.left__contents--bellow-group
+    .left__contents--bellow
+      .left__contents--bellow-group
         %p sampleグループ
-      #div.left__contents--bellow-message
+      .left__contents--bellow-message
         %p aaa
-#div.right
-  #div.right__contents
-    #div.right__contents--top
-      #div.right__contents--top-group
+.right
+  .right__contents
+    .right__contents--top
+      .right__contents--top-group
         %p techcamp
-      #div.right__contents--top-member
+      .right__contents--top-member
         %p Members: tatsuki-nakamura
-      #div.right__contents--top-button
+      .right__contents--top-button
         %p.inline Edit
 
-    #div.right__contents--bellow
-      #div.right__contents--bellow-name
+    .right__contents--bellow
+      .right__contents--bellow-name
         %p tatsuki-nakamura
-      #div.right__contents--bellow-time
+      .right__contents--bellow-time
         %p 2018/07/07
-      #div.right__contents--bellow-message
+      .right__contents--bellow-message
         %p sss
 
-#div.right__footer
-  #div.right__footer--message
+.right__footer
+  .right__footer--message
     %form{:action => "#", :method => "post"}
-    #right__footer--message-post
+    .right__footer--message-post
       %input{:type => "text", :name => "comments", placeholder: "type a message" }
-  #div.right__footer--icon
+  .right__footer--icon
     = link_to root_path do
-      %i.fa.fa-image
-  #div.right__footer--button
+      = fa_icon 'fa-image', class: 'icon'
+  .right__footer--button
     %p send
