@@ -27,7 +27,7 @@ class GroupsController < ApplicationController
 
   def update
     #もしストロングパラメーターで設定した値をgroupsテーブルに更新できたら
-    if @grpup.update(group_params)
+    if @group.update(group_params)
       #
       redirect_to group_messages_path(@group), notice: 'グループを編集しました'
     else
@@ -40,7 +40,7 @@ class GroupsController < ApplicationController
   #ストロングパラメーターの設定
   def group_params
     #groupsモデルに制限してnameカラムのパラメーターを追加
-    params.require(:group).permit(:name, { :user_ids => [] })
+    params.require(:group).permit(:name, user_ids: [] )
   end
 
   def set_group
