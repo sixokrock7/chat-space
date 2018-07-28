@@ -52,7 +52,8 @@ describe MessagesController do
   describe '#create' do
     #letメソッドを用いてparamsを定義してcreateアクションを定義する際にgroup_id,user_id,messageを引数として渡す
     #attributes_forメソッドを用いてオブジェクトを生成せずにハッシュを生成する
-    let(:params) { { group_id: group_id, user_id: user_id, message: attributes_for(:message) } }
+    
+    let(:params) { { group_id: group.id, user_id: user.id, message: attributes_for(:message) } }
 
     context 'log in' do
       before do
@@ -93,13 +94,13 @@ describe MessagesController do
         #Rspecで「〜でないこと」を期待する場合にはnot_toを使用
         #not_to change(Message, :count)と記述することによって、「Messageモデルのレコード数が変化しないこと ≒ 保存に失敗したこと」を確認
         it 'does not count up' do
-          expect{ subject }.not_to change(Message, count)
+          expect{ subject }.not_to change(Message, :count)
         end
 
         #メッセージの保存に失敗した場合、indexアクションのビューをrenderするよう設定
         it 'renders index' do
           subject
-          expect(response).to redirect_to(new_user_session_path)
+          expect(response).to render_template :index
         end
       end
     end
