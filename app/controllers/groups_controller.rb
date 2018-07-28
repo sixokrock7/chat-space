@@ -38,7 +38,7 @@ class GroupsController < ApplicationController
   #ストロングパラメーターの設定
   def group_params
     #groupsモデルに制限してnameカラムのパラメーターを追加
-    params.require(:group).permit(:name, { :user_ids => [] })
+    params.require(:group).permit(:name, user_ids: [] )
   end
 
   def set_group
