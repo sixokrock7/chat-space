@@ -245,7 +245,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   erb2haml
-  factory_girl_rails (~> 4.0)
+  factory_girl_rails
   faker
   font-awesome-rails
   haml-rails
@@ -258,7 +258,7 @@ DEPENDENCIES
   rails (~> 5.0.7)
   rails-controller-testing
   rspec
-  rspec-rails (~> 3.5)
+  rspec-rails
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
