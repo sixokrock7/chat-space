@@ -52,7 +52,7 @@ describe MessagesController do
   describe '#create' do
     #letメソッドを用いてparamsを定義してcreateアクションを定義する際にgroup_id,user_id,messageを引数として渡す
     #attributes_forメソッドを用いてオブジェクトを生成せずにハッシュを生成する
-    
+
     let(:params) { { group_id: group.id, user_id: user.id, message: attributes_for(:message) } }
 
     context 'log in' do

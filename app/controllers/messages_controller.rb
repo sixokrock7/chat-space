@@ -13,10 +13,12 @@ class MessagesController < ApplicationController
     @message = @group.messages.new(message_params)
     #もし値が保存出来たら、
     if @message.save
-
+      #respond_to doを使用しリクエストされたフォーマットによって処理を分ける
       respond_to do |format|
         format.html { redirect_to group_messages_path(params[:group_id]) }
-      format.json { reender json: @message }
+        #フォーマットがjsonの時rails newコマンドでアプリケーションを作成した際にgemfileにデフォルトで記述されているgemで、入力データをJSON形式で出力するテンプレートエンジンであるjbuilderを用いてJavaScriptに返すデータを作成
+        #JSONを返す場合はRubyのハッシュの状態のままrenderメソッドに渡すだけでJSONに変換してくれるので、コントローラーから直接データを返すことができる
+      format.json { render json: @message }
     end
       #redirect_to group_messages_path(@group), notice: 'メッセージが送信されました'
   else
