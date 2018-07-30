@@ -26,9 +26,7 @@ class GroupsController < ApplicationController
   end
 
   def update
-    #もしストロングパラメーターで設定した値をgroupsテーブルに更新できたら
     if @group.update(group_params)
-      #
       redirect_to group_messages_path(@group), notice: 'グループを編集しました'
     else
       #edit.html.hamlを描画
